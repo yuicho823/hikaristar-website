@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hikaristar.com/sitemap.xml
