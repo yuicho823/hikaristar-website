@@ -24,3 +24,21 @@ body:not(.homepage){background:#fcfbf8}body:not(.homepage) h1{font-family:var(--
 button,input,textarea,select{font-family:inherit}
 
 .service-row .num{white-space:nowrap;font-size:25px;letter-spacing:0}
+
+/* Approved six-person hero: show the complete artwork on desktop. */
+.balanced-hero{display:block;min-height:0;overflow:hidden}
+.balanced-hero .hero-visual{position:relative;width:100%;height:auto;aspect-ratio:auto}
+.balanced-hero .hero-visual img{display:block;width:100%;height:auto;object-fit:contain}
+.balanced-hero .hero-visual:after,.balanced-hero .image-caption{display:none}
+@media(min-width:801px){
+.balanced-hero .hero-copy{position:absolute;inset:0;width:100%;padding:0}
+.balanced-hero .hero-copy>p,.balanced-hero h1{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.balanced-hero .hero-copy .button{position:absolute;left:2.7%;top:83.7%;width:20.6%;height:9.6%;margin:0;padding:0;border:0;background:transparent;color:transparent;font-size:0}
+.balanced-hero .hero-copy .button span{visibility:hidden}
+.balanced-hero .hero-copy .button:hover{background:rgba(255,255,255,.12)}
+}
+@media(max-width:800px){
+.balanced-hero .hero-copy{position:relative;width:100%;padding:34px 6% 32px}
+.balanced-hero .hero-visual{width:100%;aspect-ratio:1238/845;overflow:hidden;clip-path:polygon(10.2% 0,100% 0,100% 100%,0 100%)}
+.balanced-hero .hero-visual img{position:absolute;right:0;top:0;width:150.4%;max-width:none;height:100%;object-fit:fill}
+}
